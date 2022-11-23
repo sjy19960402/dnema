@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* common css */
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+}
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+input:focus, button:focus{
+  border: none !important;
+  outline: none !important;
+}
+.top-nav{
+  background: #000 !important;
+}
+body{
+  background-color: #000;
+}
+.list-box {
+  padding-top: 150px;
+  width: 80%;
+  color: #fff;
+  margin: 0 auto;
+}
+.list-box i{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.list-box h1{
+  font-size: 2.8rem;
+  font-weight: bolder;
+  font-family: 'Montserrat';
+}
+/* top 컨텐츠 */
+.top-box .img-box{
+  width: 180px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+.top-box .img-box img{
+  width: 100%;
+  object-fit: cover;
+}
+.top-box form{
+  display: flex;
+  margin-top: 60px;
+  font-size: 1.2rem;
+}
+.top-box .cont{
+  width: 70%;
+  margin-left: 30px;
+}
+.top-box .cont input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,.2);
+    text-indent: 10px;
+    font-size: 0.8rem;
+}
+
+/* 별점 */
+.Rs {
+  position: relative;
+  font-size: 2rem;
+  color: #ddd;
+}
+.Rs input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.Rs span {
+  width: 0;
+  position: absolute;
+  left: 0;
+  color: yellow;
+  overflow: hidden;
+  pointer-events: none;
+}
+/* 별점 기본값 설정 */
+.star span{
+  width: 0;
+}
+.size{
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+/* 테이블 */
+table{
+  width: 100%;
+  margin: 30px 0 50px 0;
+  text-align: center;
+  color: #fff;
+}
+.bottom-box .table-btn{
+  transform: translateY(10px);
+  background: none;
+}
+.bottom-box .table-btn .clear-all-btn{
+  color: #ff0000;
+  font-size: 1rem;
+  font-family: 'Montserrat';
+  position: absolute;
+  right: 10%;
+  transform: translateY(-40px);
+}
+/* .bottom-box table tr td:first-of-type{
+  width: 120px;
+}
+ */
+table tr td:nth-child(2){
+  width: 490px;
+  text-align: left;
+}
+table tr td:nth-child(3){
+  font-size: 0.5rem;
+  color: #ccc;
+}
+table td {
+  padding: 20px;
+  line-height: 1.5rem;
+}
+/* 버튼 */
+.top-box button{
+  border-radius: 100%;
+  width: 34.8px;
+  height: 35.5px;
+  background: linear-gradient(101.83deg, rgb(127, 135, 224) -13.2%, rgb(38, 73, 202) -13.19%, rgb(106, 118, 223) 46.63%, rgb(50, 176, 247) 107.09%);
+  color: #fff;
+  position: absolute;
+  right: 15%;
+  transform: translateY(40px);
+}
+.top-box button i{
+  font-size: 1.4rem;
+  transform: translateY(4px);
+}
+/* 댓글 삭제 btn */
+.bottom-box i.xi-trash{
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+  html {
+    font-size: 10px;
+  }
+}
+ /* 최소 사이즈 처리 */
+@media screen and (max-width:480px) {
+  #wrap {
+    min-width: 320px;
+  }
+}

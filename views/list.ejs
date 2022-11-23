@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/image/favicon.ico" type="image/x-icon">
+    <!-- css: reset -->
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <!-- css: header -->
+    <link rel="stylesheet" href="/static/css/header.css">
+    <!-- css: list -->
+    <link rel="stylesheet" href="/static/css/list.css">
+    <!-- css : footer -->
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <!-- font : noto sans, moserrat, roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans+KR:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <!-- xelcon -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 리스트 테이블 적용 js -->
+    <script defer src="/static/js/listTable.js"></script>
+</head>
+<body>
+    <!-- 헤더 삽입 -->
+    <%-include('header.ejs') %>
+    <div class="list-box">
+      <!-- 작성구간 -->
+      <div class="top-box">
+        <i class="fas fa-edit"></i>
+    <h1>REVIEW</h1>
+    <div class="img-box">
+      <img src="/static/image/action0.jpg" alt="분노의질주 포스터">
+    </div>
+    <form id="form">
+      <!-- 별점 입력 -->
+      <div class="writer">
+      <label for="writer">별점</label><br><br>
+      <span class="Rs star">
+        ★★★★★
+        <span>★★★★★</span>
+        <input type="range" id="writer" name="star" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
+      </span>
+    </div>
+      <br />
+      <!-- 내용 입력 -->
+      <div class="cont">
+      <label for="content">내용</label><br><br>
+      <input type="text" id="content" name="cont" autocomplete="off" />
+      <br />
+</div>
+<!-- btn -->
+      <button type="submit"><i class="xi-plus-min"></i></button>
+    </form>
+  </div>
+    <br />
+    <br />
+     <!-- 입력된 내용 구간 -->
+     <div class="bottom-box">
+      <div class="table-btn">
+        <button class="clear-all-btn">clear all</button>
+      </div>
+    <table id="table" border="1" cellpadding="10" cellspacing="10">
+      <tr>
+        <td> <span class="Rs star size">
+          ★★★★★
+          <span style="width: 70%;">★★★★★</span>
+        </td>
+        <td>다음 시즌이 기대되는 내용이였습니다.</td>
+        <td>2022-10-05 12:34</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> <span class="Rs star size">
+          ★★★★★
+          <span style="width: 100%;">★★★★★</span>
+        </td>
+        <td>2번 3번 봤습니다 폴워커는 언제봐도 멋있네요, 이제는 볼 수 없음이 안타깝습니다.</td>
+        <td>2022-10-08 18:06</td>
+        <td></td>
+      </tr>
+      <!-- 
+        코드 추가 예시
+        <tr>
+          <td>홍길동</td>
+          <td>하이</td>
+          <td>2022-10-05 12:34</td>
+        </tr>
+      -->
+    </table>
+  </div>
+
+  <!--footer-->
+  <%-include('footer.ejs') %>
+  
+</body>
+</html>
