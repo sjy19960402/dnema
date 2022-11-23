@@ -6,7 +6,6 @@
   "homepage": "https://sjy19960402.github.io/dnema/",
   "scripts": {
     "start": "node app.js",
-    "bulid" : "webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
