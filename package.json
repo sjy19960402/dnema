@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "homepage": "https://kdt-3rd-d.github.io/main/",
+  "homepage": "https://sjy19960402.github.io/dnema/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
