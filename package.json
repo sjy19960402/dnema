@@ -5,6 +5,8 @@
   "main": "app.js",
   "homepage": "https://sjy19960402.github.io/dnema/",
   "scripts": {
+    "start": "node app.js",
+    "bulid" : "webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -14,6 +16,7 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "webpack-dev-server": "~2.9.4"
   }
 }
