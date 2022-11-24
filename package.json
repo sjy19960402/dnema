@@ -5,9 +5,8 @@
   "main": "app.js",
   "homepage": "https://sjy19960402.github.io/dnema/",
   "scripts": {
-    "start": "node app.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
